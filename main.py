@@ -33,9 +33,9 @@ class Hall:
                     else:
                         print(f'Seat {row,col} is already booked!!')
                 else:
-                    print('Invalid seat number!')
+                    print('Invalid seat number!!')
         else:
-            print('Show Id not found')
+            print('SHOW ID NOT FOUND!!')
     
     def view_show_list(self):
         print('-------------------------------')
@@ -44,9 +44,12 @@ class Hall:
         print('-------------------------------')
 
     def view_available_seats(self, show_id):
-        seat = self.__seats[show_id]
-        for i in seat:
-            print(i)
+        if show_id in self.__seats:
+            seat = self.__seats[show_id]
+            for i in seat:
+                print(i)
+        else:
+            print('SHOW ID NOT FOUND!!')
 
 
 hall = Hall(4, 4, 100)
