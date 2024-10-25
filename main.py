@@ -74,3 +74,5 @@ while True:
         hall.book_seat(id, total)
     else:
         break
+
+######
